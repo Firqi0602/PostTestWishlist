@@ -3,6 +3,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 
+import com.juaracoding.pageobject.drivers.startegies.DriverStrategy;
 
 public class Chrome implements DriverStrategy {
 

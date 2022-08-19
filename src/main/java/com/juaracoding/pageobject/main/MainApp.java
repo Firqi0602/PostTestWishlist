@@ -10,7 +10,7 @@ public class MainApp{
 		
 		DriverSingleton.getInstance("Firefox");
 		WebDriver driver = DriverSingleton.getDriver();
-		String url = "\"https://opensource-demo.orangehrmlive.com/\"";
+		String url = "https://opensource-demo.orangehrmlive.com/";
 		driver.get(url);
 		
 		LoginPage loginPage = new LoginPage();

@@ -4,8 +4,8 @@ import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.WebDriver;
 
-import com.juaracoding.pageobject.drivers.startegies.DriverStrategy;
 import com.juaracoding.pageobject.drivers.startegies.DriverStrategyImplementer;
+import com.juaracoding.pageobject.drivers.startegies.DriverStrategy;
 
 public class DriverSingleton{
 	

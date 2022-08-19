@@ -24,11 +24,25 @@ public class LoginPage{
 		@FindBy (xpath = "//*[@id=\"btnLogin\"]")
 		private WebElement btnLogin;
 		
+		@FindBy (xpath = "//span[@id='spanMessage']")
+		private WebElement msgError;
+		
+		@FindBy (xpath = "//b[normalize-space()='Dashboard']")
+		private WebElement txtDashboard;
+		
 		public void login(String username, String password) {
-			this.username.sendKeys("Admin");
-			this.password.sendKeys("admin1234");
+			this.username.sendKeys("username");
+			this.password.sendKeys("password");
 			btnLogin.click();
-
-	}
+				
+				}
+//Actual
+		public String msgInvalid() {
+			return msgError.getTagName();
+			
+		}
+		public String getTxtDashboard() {
+			return txtDashboard.getText();
+		}
+		}
 	
-}
