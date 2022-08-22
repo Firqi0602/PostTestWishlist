@@ -34,29 +34,13 @@ import com.juaracoding.pageobject.pages.Wishlist;
 		public void testSearch() {
 			wishlist.search();
 			delay(1);
-			String txtAlert = driver.switchTo().alert().getText();
-			driver.switchTo().alert().dismiss();
-			delay(1);
-			System.out.println(wishlist.getTxtSearchResult());
-			System.out.println(txtAlert);
-			String txt = wishlist.getTxtSearchResult();
-			assertTrue(txt.contains("TYPE"));
+			
 		}
-
 		@Test
-		public void testSearchWishlist1() {
-			scroll(700);
-			JavascriptExecutor js = (JavascriptExecutor) driver;
-			js.executeScript("window.scrollBy(0,700)");
-		}
-
-		@Test
-		public void testSearchWishlist2() {
-			scroll(700);
-			JavascriptExecutor js = (JavascriptExecutor) driver;
-			js.executeScript("window.scrollBy(0,700)");
-		}
-		@AfterClass
+		public void TestSearch() {
+			wishlist.search("Dress\n");
+		
+			@AfterClass
 		public void closeBrowser() {
 			delay(3);
 			driver.quit();
@@ -69,10 +53,6 @@ import com.juaracoding.pageobject.pages.Wishlist;
 				e.printStackTrace();
 			}
 
-		}
-		static void scroll (int vertical) {
-			JavascriptExecutor js = (JavascriptExecutor) driver;
-			js.executeScript("window.scrollBy(0,"+vertical+")");
 		}
 	}
 

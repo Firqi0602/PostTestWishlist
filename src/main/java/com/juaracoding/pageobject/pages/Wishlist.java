@@ -15,30 +15,16 @@ private WebDriver driver;
 		this.driver = DriverSingleton.getDriver();
 		PageFactory.initElements(driver, this);
 	}
+	@FindBy(xpa)
+	
 	
 	@FindBy(xpath = "//a[@class='noo-search']")
 	private WebElement btnSearch;
 	
-	@FindBy(xpath = "//label[@class='note-search']")
-	private WebElement txtSearchResult;
 
-	@FindBy(xpath = "//div[10]//div[1]//div[1]//div[1]//div[2]//div[1]//a[1]")
-	private WebElement btnWishlist1;
-	
-	@FindBy(xpath = "//div[11]//div[1]//div[1]//div[1]//div[2]//div[1]//a[1]")
-	private WebElement btnWishlist2;
-	
 	public void search() {
 		btnSearch.click();
-	}
-	public void wishlist1() {
-		btnWishlist1.click();
-	}
-	public void wishlist2() {
-		btnWishlist1.click();
-	}
-	public String getTxtSearchResult() {
-		return txtSearchResult.getText();
+		this.btnSearch.sendKeys("Dress\n");
 	}
 
 		
