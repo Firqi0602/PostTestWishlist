@@ -15,8 +15,6 @@ import com.juaracoding.pageobject.pages.Searchpage;
 	@Test
 	public class TestDemo {
 
-		
-
 		public static WebDriver driver;
 		private LoginPage loginPage;
 
